@@ -18,7 +18,7 @@ public class Main {
             squirrel = s;
         }
         //set up complete Story begins
-
+        //test
         int conesToEat = rand.nextInt(5)+1;
         int ate = squirrel.eat(conesToEat);
         int wind = rand.nextInt(20);
