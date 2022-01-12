@@ -18,7 +18,6 @@ public class Main {
             squirrel = s;
         }
         //set up complete Story begins
-        //test
         int conesToEat = rand.nextInt(5)+1;
         int ate = squirrel.eat(conesToEat);
         int wind = rand.nextInt(20);
@@ -33,7 +32,7 @@ public class Main {
             } else {
                 System.out.println("The squirrel did not find enough food in its nest");
             }
-            if (owl.eat()) {
+            if (owl.eat(null)) {
                 System.out.println("The owl ate a squirrel");
             } else {
                 System.out.println("Owl found no squirrel to eat");

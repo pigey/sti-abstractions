@@ -1,18 +1,21 @@
 import java.util.Random;
 
-public class Owl {
-    private int wingSpan;
+public class Owl extends Animal {
     private boolean hungry;
     private PineTree tree;
 
 
-    public Owl(int wingSpan, boolean hungry){
-        this.wingSpan = wingSpan;
+    public Owl(int weight, boolean hungry){
+        super(weight);
         this.hungry = hungry;
 
     }
+    public void setTree(PineTree tree){
+        this.tree = tree;
+    }
 
-    public boolean eat(){
+    @Override
+    public boolean eat(Object food){
         Random rand = new Random();
         boolean catchSquirrel = rand.nextInt(2) == 1;
         if (hungry && catchSquirrel){
@@ -25,7 +28,5 @@ public class Owl {
 
     }
 
-    public void setTree(PineTree tree){
-        this.tree = tree;
-    }
+
 }
